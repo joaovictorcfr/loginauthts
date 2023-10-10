@@ -1,0 +1,57 @@
+.container {
+  padding-top: 20px;
+  border-top: solid 0.1px;
+  color: rgb(54, 46, 46);
+}
+
+.container h2 {
+  text-align: center;
+  color: aliceblue;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.container p {
+  text-align: center;
+  color: #d3ad7f;
+  padding-bottom: 10px;
+}
+
+.container span {
+  text-align: center;
+  color: #ffffff;
+}
+
+.container_footer {
+  display: flex;
+  justify-content: center;
+}
+
+.container_footer ul li a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  padding-bottom: 10px;
+}
+
+.container_footer ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.container_footer ul li {
+  list-style: none;
+}
+
+.container_footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.container_footer a:hover {
+  text-transform: capitalize;
+  color: #d3ad7f;
+}

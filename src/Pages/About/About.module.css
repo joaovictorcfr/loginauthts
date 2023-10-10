@@ -1,0 +1,64 @@
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.container h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: #d3ad7f;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.container span {
+  color: #ffffff;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.container_content {
+  height: 650px;
+  background-color: #13131a;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.about_title h2 {
+  margin: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.about_title p {
+  margin: 20px;
+  padding-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2rem;
+}
+
+.about_title {
+  margin-top: 5rem;
+}
+
+.about_title button {
+  padding: 10px 15px;
+  margin: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #d3ad7f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.about_title button:hover {
+  color: #222;
+  letter-spacing: 2px;
+}
+
+.about_image img{
+  height: 650px;
+}

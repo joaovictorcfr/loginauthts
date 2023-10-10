@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+  background-image: url(../img/home-img.jpeg);
+  background-color: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.container h1 {
+  text-transform: uppercase;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+
+.container span {
+  color: #d3ad7f;
+}
+
+.register_form {
+  background-color: #000000;
+  border: 1px solid #d3ad7f;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 530px;
+  text-align: center;
+}
+
+.register_form label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+}
+
+.register_form input {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register_form button {
+  padding: 15px 30px;
+  background-color: #d3ad7f;
+  font-weight: bold;
+  transition: 0.5s all;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.register_form button:hover {
+  letter-spacing: 3px;
+}
+
+.register_form button a {
+  text-decoration: none;
+  color: #fff;
+}
