@@ -26,7 +26,7 @@ function Register() {
     setCpf(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     // Adicione lógica para autenticar o usuário aqui
   };
