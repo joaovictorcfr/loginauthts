@@ -1,13 +1,12 @@
 import { useState } from "react";
 import styles from "./Register.module.css";
-import { Link } from "react-router-dom";
+import { ApiRegister } from "../../services/ApiRegister";
+import { Link } from "react-router-dom"; // Supondo que você está usando React Router para navegação
 
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confpassword, setConfpassword] = useState("");
-  const [cpf, setCpf] = useState("");
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -16,25 +15,40 @@ function Register() {
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-  const handleConfpasswordChange = (event) => {
-    setConfpassword(event.target.value);
-  };
-  const handleCpfChange = (event) => {
-    setCpf(event.target.value);
-  };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Adicione lógica para autenticar o usuário aqui
+
+    try {
+      // Fazer a requisição para registrar o usuário
+      const response = await ApiRegister.post("", {
+        email,
+        password,
+      });
+
+      if (response.status === 200) {
+        // Registro bem-sucedido
+        alert("Usuário registrado com sucesso!");
+        console.log("User cadastrado");
+        // Redirecionar para a página de login ou outra página desejada
+      } else {
+        // Tratar erros de registro aqui, se necessário
+        alert("Erro ao registrar o usuário.");
+      }
+    } catch (error) {
+      // Tratar erros de rede ou outros erros aqui
+      console.error("Erro ao registrar o usuário:", error);
+    }
   };
 
   return (
     <div className={styles.container}>
       <h1>
-        Registrar <span>usuario</span>
+        Registrar <span>usuário</span>
       </h1>
       <div className={styles.container_register}>
         <form onSubmit={handleSubmit} className={styles.register_form}>
@@ -65,24 +79,6 @@ function Register() {
             onChange={handlePasswordChange}
             required
           />
-          <label htmlFor="confpassword">Confirme sua senha</label>
-          <input
-            type="password"
-            placeholder="Confirme sua senha"
-            id="confpassword"
-            value={confpassword}
-            onChange={handleConfpasswordChange}
-            required
-          />
-          <label htmlFor="cpf">CPF</label>
-          <input
-            type="text"
-            placeholder="Digite seu CPF"
-            id="cpf"
-            value={cpf}
-            onChange={handleCpfChange}
-            required
-          />
           <button type="submit" className={styles.btn_register}>
             <Link to={"/"}>Cadastrar</Link>
           </button>
@@ -91,4 +87,5 @@ function Register() {
     </div>
   );
 }
+
 export default Register;
